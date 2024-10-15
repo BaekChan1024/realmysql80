@@ -1,10 +1,12 @@
 services:
   mysql:
-    image: 'mysql:8.0.39-debian'
+    image: 'mysql:8.0.39'
     environment:
       - 'MYSQL_DATABASE=mydatabase'
       - 'MYSQL_PASSWORD=secret'
       - 'MYSQL_ROOT_PASSWORD=verysecret'
       - 'MYSQL_USER=myuser'
+    volumes:
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     ports:
       - '3306'

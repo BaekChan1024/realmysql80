@@ -4,3 +4,8 @@ spring:
   docker:
     compose:
       lifecycle-management: start_and_stop
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydatabase?serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: verysecret
