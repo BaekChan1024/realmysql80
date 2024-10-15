@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: realmysql80
+  docker:
+    compose:
+      lifecycle-management: start_and_stop
